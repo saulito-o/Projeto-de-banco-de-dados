@@ -1,90 +1,224 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoDoa - Contrato Mágico</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>EcoDoa ✨</title>
 
-    <style>
-        /* =========================================
-           TEMA: PUELLA MAGI MADOKA MAGICA
-           ========================================= */
-        
-        :root {
-            --cor-fundo: #1a0b2e; /* Roxo muito escuro (Labirinto) */
-            --cor-rosa-neon: #ff66b2; /* Rosa Madoka */
-            --cor-rosa-brilho: rgba(255, 102, 178, 0.6);
-            --cor-dourado: #f5d547; /* Amarelo Mami */
-            --cor-card: #2a164a; /* Roxo intermediário */
-            --cor-texto: #fce4ec; /* Branco rosado */
-        }
+<style>
 
-        /* Fundo Xadrez Sutil (Estilo Bruxa) */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Nunito', sans-serif;
-            background-color: var(--cor-fundo);
-            background-image: 
-                repeating-linear-gradient(45 deg, rgba(0,0,0,0.1) 25 %, transparent 25 %, transparent 75 %, rgba(0,0,0,0.1) 75 %, rgba(0,0,0,0.1)), 
-                repeating-linear-gradient(45 deg, rgba(0,0,0,0.1) 25 %, var(--cor-fundo) 25 %, var(--cor-fundo) 75 %, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1));
-            background-position: 0 0, 20 px 20 px;
-            background-size: 40 px 40 px;
-            color: var(--cor-texto);
-        }
+body{
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg,#ffd6f5,#e7c6ff,#cdb4db);
+    color:#3a2e4f;
+}
 
-        /* Cabeçalho com Brilho Neon */
-        header {
-            background-color: rgba(26, 11, 46, 0.9);
-            padding: 20 px 50 px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2 px solid var(--cor-rosa-neon);
-            box-shadow: 0 0 15 px var(--cor-rosa-brilho);
-        }
+/* NAVBAR */
 
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5 rem;
-            color: var(--cor-rosa-neon);
-            text-shadow: 0 0 10 px var(--cor-rosa-brilho), 0 0 20 px var(--cor-rosa-brilho);
-            margin: 0;
-        }
+nav{
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20 px;
-            margin: 0;
-            padding: 0;
-        }
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#d63384;
+}
 
-        nav a {
-            color: var(--cor-texto);
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1 px;
-            transition: 0.3 s;
-        }
+.menu a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#5a3d6e;
+    font-weight:600;
+}
 
-        nav a:hover {
-            color: var(--cor-rosa-neon);
-            text-shadow: 0 0 8 px var(--cor-rosa-brilho);
-        }
+/* HERO */
 
-        /* Container Principal do Mural */
-        .container {
-            max-width: 1200 px;
-            margin: 40 px auto;
-            padding: 0 20 px;
-        }
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
 
-        .titulo-secao {
-            font-family: 'Cinzel', serif;
-            text-align: center;
-            font-size: 2 rem;
-            margin-bottom: 40 px;
+.hero h1{
+    font-size:48px;
+    color:#b5179e;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.hero button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff8fab,#c77dff);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* FORM */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+}
+
+.form-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    margin-top:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.form-card h2{
+    text-align:center;
+    color:#9d4edd;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+button.submit{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:20px;
+    background:linear-gradient(45deg,#ff8fab,#9d4edd);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ITENS */
+
+.itens{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.item{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.item h3{
+    color:#c9184a;
+}
+
+.item button{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    background:#c77dff;
+    color:white;
+}
+
+footer{
+    margin-top:80px;
+    text-align:center;
+    padding:20px;
+    background:rgba(255,255,255,0.5);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">EcoDoa ✨</div>
+
+<div class="menu">
+<a href="#">Início</a>
+<a href="#">Doações</a>
+<a href="#">ONGs</a>
+<a href="#">Login</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Transforme Desapego em Magia</h1>
+<p>Conectando pessoas que querem doar com quem realmente precisa.</p>
+
+<button>Doar um Item 💖</button>
+</section>
+
+<div class="container">
+
+<div class="form-card">
+
+<h2>Cadastrar Doação</h2>
+
+<form>
+
+<label>Nome do Item</label>
+<input type="text" placeholder="Ex: Geladeira usada">
+
+<label>Categoria</label>
+<input type="text" placeholder="Móveis, roupas, eletrônicos">
+
+<label>Descrição</label>
+<textarea placeholder="Descreva o item"></textarea>
+
+<label>Cidade</label>
+<input type="text">
+
+<button class="submit">Cadastrar Item ✨</button>
+
+</form>
+
+</div>
+
+<div class="itens">
+
+<div class="item">
+<h3>Sofá</h3>
+<p>Bom estado</p>
+<button>Reservar</button>
+</div>
+
+<div class="item">
+<h3>Geladeira</h3>
+<p>Funcionando</p>
+<button>Reservar</button>
+</div>
+
+<div class="item">
+<h3>Roupas</h3>
+<p>Variadas</p>
+<button>Reservar</button>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+EcoDoa 🌙 Conectando solidariedade e sustentabilidade
+</footer>
+
+</body>
+</html>
