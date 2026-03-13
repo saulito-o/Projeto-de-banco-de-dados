@@ -3,53 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoDoa - Mural de Doações</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <title>EcoDoa - Contrato Mágico</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
-    <div class="main-container">
+    <style>
+        /* =========================================
+           TEMA: PUELLA MAGI MADOKA MAGICA
+           ========================================= */
+        
+        :root {
+            --cor-fundo: #1a0b2e; /* Roxo muito escuro (Labirinto) */
+            --cor-rosa-neon: #ff66b2; /* Rosa Madoka */
+            --cor-rosa-brilho: rgba(255, 102, 178, 0.6);
+            --cor-dourado: #f5d547; /* Amarelo Mami */
+            --cor-card: #2a164a; /* Roxo intermediário */
+            --cor-texto: #fce4ec; /* Branco rosado */
+        }
 
-        <header class="magic-header">
-            <div class="logo">EcoDoa</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Cadastrar Item</a></li>
-                    <li><a href="#">Mural</a></li>
-                    <li><a href="#">Minhas Reservas</a></li>
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </nav>
-        </header>
+        /* Fundo Xadrez Sutil (Estilo Bruxa) */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--cor-fundo);
+            background-image: 
+                repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1)), 
+                repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 25%, var(--cor-fundo) 25%, var(--cor-fundo) 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1));
+            background-position: 0 0, 20px 20px;
+            background-size: 40px 40px;
+            color: var(--cor-texto);
+        }
 
-        <main class="content-wrapper">
-            
-            <section class="item-grid">
-                <div class="item-card">
-                    <img src="cadeira.jpg" alt="Cadeira de Escritório">
-                    <h3>Cadeira de Escritório</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                    <button class="grief-seed-btn">Tenho Interesse</button>
-                </div>
-                </section>
+        /* Cabeçalho com Brilho Neon */
+        header {
+            background-color: rgba(26, 11, 46, 0.9);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--cor-rosa-neon);
+            box-shadow: 0 0 15px var(--cor-rosa-brilho);
+        }
 
-            <aside class="filter-sidebar">
-                <h3>Filtros Mágicos</h3>
-                <ul>
-                    <li>Móveis</li>
-                    <li>Eletrônicos</li>
-                    <li>Alimentos</li>
-                </ul>
-            </aside>
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--cor-rosa-neon);
+            text-shadow: 0 0 10px var(--cor-rosa-brilho), 0 0 20px var(--cor-rosa-brilho);
+            margin: 0;
+        }
 
-        </main>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
 
-        <footer class="magic-footer">
-            <p>© EcoDoa - Fazendo Milagres Acontecerem</p>
-        </footer>
+        nav a {
+            color: var(--cor-texto);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
 
-    </div>
+        nav a:hover {
+            color: var(--cor-rosa-neon);
+            text-shadow: 0 0 8px var(--cor-rosa-brilho);
+        }
 
-</body>
-</html>
+        /* Container Principal do Mural */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .titulo-secao {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
